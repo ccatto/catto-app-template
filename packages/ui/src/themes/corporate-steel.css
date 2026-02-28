@@ -1,0 +1,93 @@
+/**
+ * Corporate Steel Theme
+ * =====================
+ *
+ * Brand: Deep Blue (#1e40af) + Teal (#0d9488)
+ *
+ * Clean, professional, trustworthy — business leagues, corporate rec programs.
+ * Primary = Deep Blue (buttons, links)
+ * Secondary = Teal (accents, highlights)
+ */
+
+/* Light Mode */
+[data-theme='corporate-steel'] {
+  /* Primary = Deep Blue */
+  --catto-theme-primary: #1e40af; /* blue-800 */
+  --catto-theme-primary-hover: #1e3a8a; /* blue-900 */
+  --catto-theme-primary-active: #172554; /* blue-950 */
+  --catto-theme-on-primary: #f8fafc; /* slate-50 */
+  --catto-theme-primary-subtle: #dbeafe; /* blue-100 */
+
+  /* Secondary = Teal */
+  --catto-theme-secondary: #0d9488; /* teal-600 */
+  --catto-theme-secondary-hover: #0f766e; /* teal-700 */
+  --catto-theme-secondary-active: #115e59; /* teal-800 */
+  --catto-theme-on-secondary: #ffffff;
+  --catto-theme-secondary-subtle: #ccfbf1; /* teal-100 */
+
+  /* Accent = Teal (same as secondary) */
+  --catto-theme-accent: #0d9488; /* teal-600 */
+  --catto-theme-accent-hover: #14b8a6; /* teal-500 */
+  --catto-theme-on-accent: #ffffff;
+
+  /* Surfaces - Light mode (cool slate tones) */
+  --catto-theme-background: #f8fafc; /* slate-50 */
+  --catto-theme-surface: #f1f5f9; /* slate-100 */
+  --catto-theme-surface-elevated: #ffffff;
+  --catto-theme-surface-sunken: #e2e8f0; /* slate-200 */
+  --catto-theme-surface-secondary: #e2e8f0; /* slate-200 */
+  --catto-theme-surface-tertiary: #cbd5e1; /* slate-300 */
+
+  /* Text - Light mode */
+  --catto-theme-text: #0f172a; /* slate-900 */
+  --catto-theme-text-muted: #475569; /* slate-600 */
+  --catto-theme-text-subtle: #64748b; /* slate-500 */
+  --catto-theme-text-inverse: #f8fafc; /* slate-50 */
+
+  /* Borders - Light mode */
+  --catto-theme-border: #e2e8f0; /* slate-200 */
+  --catto-theme-border-subtle: #f1f5f9; /* slate-100 */
+  --catto-theme-border-strong: #cbd5e1; /* slate-300 */
+}
+
+/* Dark Mode */
+[data-theme='corporate-steel'].dark,
+.dark[data-theme='corporate-steel'] {
+  /* Primary = Lighter blue for dark mode readability */
+  --catto-theme-primary: #3b82f6; /* blue-500 */
+  --catto-theme-primary-hover: #60a5fa; /* blue-400 */
+  --catto-theme-primary-active: #2563eb; /* blue-600 */
+  --catto-theme-on-primary: #0f172a; /* slate-900 */
+  --catto-theme-primary-subtle: #1e3a8a; /* blue-900 */
+
+  /* Secondary = Teal stays vibrant in dark mode */
+  --catto-theme-secondary: #14b8a6; /* teal-500 */
+  --catto-theme-secondary-hover: #2dd4bf; /* teal-400 */
+  --catto-theme-secondary-active: #0d9488; /* teal-600 */
+  --catto-theme-on-secondary: #0f172a; /* slate-900 */
+  --catto-theme-secondary-subtle: #134e4a; /* teal-900 */
+
+  /* Accent = Teal */
+  --catto-theme-accent: #2dd4bf; /* teal-400 */
+  --catto-theme-accent-hover: #5eead4; /* teal-300 */
+  --catto-theme-on-accent: #0f172a; /* slate-900 */
+
+  /* Surfaces - Dark mode (cool slate tones) */
+  --catto-theme-background: #0f172a; /* slate-900 */
+  --catto-theme-surface: #1e293b; /* slate-800 */
+  --catto-theme-surface-elevated: #334155; /* slate-700 */
+  --catto-theme-surface-sunken: #020617; /* slate-950 */
+  --catto-theme-surface-secondary: #334155; /* slate-700 */
+  --catto-theme-surface-tertiary: #475569; /* slate-600 */
+
+  /* Text - Dark mode */
+  --catto-theme-text: #f8fafc; /* slate-50 */
+  --catto-theme-text-muted: #cbd5e1; /* slate-300 */
+  --catto-theme-text-subtle: #94a3b8; /* slate-400 */
+  --catto-theme-text-inverse: #0f172a; /* slate-900 */
+
+  /* Borders - Dark mode */
+  --catto-theme-border: #334155; /* slate-700 */
+  --catto-theme-border-subtle: #1e293b; /* slate-800 */
+  --catto-theme-border-strong: #475569; /* slate-600 */
+}

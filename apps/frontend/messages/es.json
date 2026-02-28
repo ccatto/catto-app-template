@@ -1,0 +1,62 @@
+{
+  "metadata": {
+    "title": "Mi App",
+    "description": "Construido con la plantilla Catto App"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salio mal",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "back": "Atras",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "noResults": "No se encontraron resultados",
+    "confirmDelete": "Estas seguro de que quieres eliminar esto?",
+    "yes": "Si",
+    "no": "No"
+  },
+  "auth": {
+    "signIn": "Iniciar sesion",
+    "signOut": "Cerrar sesion",
+    "signUp": "Registrarse",
+    "email": "Correo electronico",
+    "password": "Contrasena",
+    "forgotPassword": "Olvidaste tu contrasena?",
+    "createAccount": "Crear cuenta",
+    "alreadyHaveAccount": "Ya tienes una cuenta?",
+    "dontHaveAccount": "No tienes una cuenta?",
+    "signInPageTitle": "Iniciar sesion",
+    "tagline": "Bienvenido de vuelta",
+    "orContinueWith": "O continuar con",
+    "name": "Nombre",
+    "confirmPassword": "Confirmar contrasena"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "dashboard": "Panel",
+    "account": "Cuenta",
+    "signIn": "Iniciar sesion"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido a tu panel",
+    "description": "Esta es una pagina protegida que requiere autenticacion."
+  },
+  "about": {
+    "title": "Acerca de",
+    "description": "Esta app fue construida usando la plantilla Catto App."
+  },
+  "home": {
+    "title": "Bienvenido",
+    "subtitle": "Nombre de tu App",
+    "description": "Una aplicacion moderna full-stack construida con Next.js, NestJS y Prisma.",
+    "getStarted": "Comenzar",
+    "learnMore": "Saber mas"
+  }
+}

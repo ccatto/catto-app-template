@@ -1,0 +1,55 @@
+{
+  "name": "@catto/profanity",
+  "version": "1.0.0",
+  "description": "Catto Profanity - Multi-language profanity filter with Zod and NestJS support",
+  "license": "MIT",
+  "author": "Chris Catto",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./zod": {
+      "types": "./dist/zod.d.ts",
+      "default": "./dist/zod.js"
+    },
+    "./nest": {
+      "types": "./dist/nest.d.ts",
+      "default": "./dist/nest.js"
+    }
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@2toad/profanity": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "class-validator": "^0.14.0",
+    "jest": "^29.7.0",
+    "reflect-metadata": "^0.2.0",
+    "rimraf": "^6.0.0",
+    "ts-jest": "^29.2.0",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "class-validator": ">=0.14.0"
+  },
+  "peerDependenciesMeta": {
+    "class-validator": {
+      "optional": true
+    }
+  }
+}

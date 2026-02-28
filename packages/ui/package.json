@@ -1,0 +1,185 @@
+{
+  "name": "@catto/ui",
+  "version": "1.0.0",
+  "description": "Catto UI Component Library - React components with Tailwind CSS",
+  "keywords": [
+    "react",
+    "react-components",
+    "components",
+    "ui",
+    "ui-library",
+    "design-system",
+    "tailwindcss",
+    "tailwind",
+    "nextjs",
+    "next",
+    "typescript",
+    "dark-mode",
+    "accessible",
+    "a11y",
+    "mobile-first",
+    "capacitor",
+    "catto"
+  ],
+  "homepage": "https://github.com/chriscatto/catto-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chriscatto/catto-ui",
+    "directory": "packages/ui"
+  },
+  "license": "MIT",
+  "author": "Chris Catto",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/themes/tokens.css": {
+      "style": "./dist/themes/tokens.css",
+      "default": "./dist/themes/tokens.css"
+    },
+    "./dist/themes/rleaguez.css": {
+      "style": "./dist/themes/rleaguez.css",
+      "default": "./dist/themes/rleaguez.css"
+    },
+    "./dist/themes/neon-pulse.css": {
+      "style": "./dist/themes/neon-pulse.css",
+      "default": "./dist/themes/neon-pulse.css"
+    },
+    "./dist/themes/royal-crown.css": {
+      "style": "./dist/themes/royal-crown.css",
+      "default": "./dist/themes/royal-crown.css"
+    },
+    "./dist/themes/corporate-steel.css": {
+      "style": "./dist/themes/corporate-steel.css",
+      "default": "./dist/themes/corporate-steel.css"
+    },
+    "./dist/themes/forest-earth.css": {
+      "style": "./dist/themes/forest-earth.css",
+      "default": "./dist/themes/forest-earth.css"
+    },
+    "./themes/tokens.css": {
+      "style": "./dist/themes/tokens.css",
+      "default": "./dist/themes/tokens.css"
+    },
+    "./themes/rleaguez.css": {
+      "style": "./dist/themes/rleaguez.css",
+      "default": "./dist/themes/rleaguez.css"
+    },
+    "./themes/neon-pulse.css": {
+      "style": "./dist/themes/neon-pulse.css",
+      "default": "./dist/themes/neon-pulse.css"
+    },
+    "./themes/royal-crown.css": {
+      "style": "./dist/themes/royal-crown.css",
+      "default": "./dist/themes/royal-crown.css"
+    },
+    "./themes/corporate-steel.css": {
+      "style": "./dist/themes/corporate-steel.css",
+      "default": "./dist/themes/corporate-steel.css"
+    },
+    "./themes/forest-earth.css": {
+      "style": "./dist/themes/forest-earth.css",
+      "default": "./dist/themes/forest-earth.css"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "build-storybook": "storybook build -o storybook-static",
+    "clean": "rimraf dist",
+    "dev": "tsup --watch",
+    "prepublishOnly": "yarn test:run && yarn typecheck && yarn build",
+    "storybook": "storybook dev -p 6006",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.563.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@storybook/react-vite": "^10.0.0",
+    "@tanstack/react-table": "^8.21.0",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "axe-core": "^4.10.0",
+    "glob": "^13.0.0",
+    "jsdom": "^25.0.0",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
+    "rimraf": "^6.0.0",
+    "storybook": "^10.0.0",
+    "tinyglobby": "^0.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vitest": "^4.0.0",
+    "zod": "^4.0.0"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=5.0.0",
+    "@capacitor/haptics": ">=5.0.0",
+    "@hookform/resolvers": ">=5.0.0",
+    "@tanstack/react-table": ">=8.0.0",
+    "libphonenumber-js": ">=1.10.0",
+    "next": ">=14.0.0",
+    "next-themes": ">=0.2.0",
+    "react": ">=18.0.0 || >=19.0.0",
+    "react-dom": ">=18.0.0 || >=19.0.0",
+    "react-hook-form": ">=7.55.0",
+    "zod": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@capacitor/core": {
+      "optional": true
+    },
+    "@capacitor/haptics": {
+      "optional": true
+    },
+    "@hookform/resolvers": {
+      "optional": true
+    },
+    "@tanstack/react-table": {
+      "optional": true
+    },
+    "libphonenumber-js": {
+      "optional": true
+    },
+    "next-themes": {
+      "optional": true
+    },
+    "react-hook-form": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  }
+}

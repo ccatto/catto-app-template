@@ -1,0 +1,117 @@
+// Catto App Template - Prisma Schema
+// Keep auth-related models. Add your domain models below the TODO section.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================================================
+// Auth Models (Better Auth + JWT)
+// ============================================================================
+
+enum UserRole {
+  user
+  platform_admin
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  username      String?   @unique
+  email         String    @unique
+  emailVerified Boolean   @default(false)
+  image         String?
+  role          UserRole  @default(user)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  // Better Auth relations
+  sessions Session[]
+  accounts Account[]
+
+  // Push notification tokens
+  pushTokens DevicePushToken[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  expiresAt DateTime
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id @default(cuid())
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@map("account")
+}
+
+model Verification {
+  id         String    @id @default(cuid())
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
+
+  @@map("verification")
+}
+
+// Push notification device tokens
+model DevicePushToken {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  platform  String   // 'ios' | 'android' | 'web'
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@map("device_push_token")
+}
+
+// ============================================================================
+// TODO: Add your domain models below
+// ============================================================================
+// Example:
+// model Post {
+//   id        Int      @id @default(autoincrement())
+//   title     String
+//   content   String?
+//   published Boolean  @default(false)
+//   authorId  String
+//   author    User     @relation(fields: [authorId], references: [id])
+//   createdAt DateTime @default(now())
+//   updatedAt DateTime @updatedAt
+//
+//   @@map("post")
+// }

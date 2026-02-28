@@ -1,0 +1,96 @@
+/**
+ * NeonPulse Theme
+ * ===============
+ *
+ * Aesthetic: Futuristic, Cyberpunk, Tech Dashboard
+ * Primary: Cyan/Teal (#06b6d4)
+ * Secondary: Purple/Violet (#8b5cf6)
+ * Vibe: Dark mode focused with neon accents
+ */
+
+/* Light Mode (supported but rare use case) */
+[data-theme='neon-pulse'] {
+  /* Primary = Cyan/Teal */
+  --catto-theme-primary: #0891b2; /* cyan-600 */
+  --catto-theme-primary-hover: #06b6d4; /* cyan-500 */
+  --catto-theme-primary-active: #0e7490; /* cyan-700 */
+  --catto-theme-on-primary: #ffffff;
+  --catto-theme-primary-subtle: #cffafe; /* cyan-100 */
+
+  /* Secondary = Purple/Violet */
+  --catto-theme-secondary: #7c3aed; /* violet-600 */
+  --catto-theme-secondary-hover: #8b5cf6; /* violet-500 */
+  --catto-theme-secondary-active: #6d28d9; /* violet-700 */
+  --catto-theme-on-secondary: #ffffff;
+  --catto-theme-secondary-subtle: #ede9fe; /* violet-100 */
+
+  /* Accent = Purple */
+  --catto-theme-accent: #a855f7; /* purple-500 */
+  --catto-theme-accent-hover: #c084fc; /* purple-400 */
+  --catto-theme-on-accent: #ffffff;
+
+  /* Surfaces - Light mode */
+  --catto-theme-background: #f1f5f9; /* slate-100 */
+  --catto-theme-surface: #ffffff;
+  --catto-theme-surface-elevated: #ffffff;
+  --catto-theme-surface-sunken: #e2e8f0; /* slate-200 */
+  --catto-theme-surface-secondary: #e2e8f0; /* slate-200 - hover states */
+  --catto-theme-surface-tertiary: #cbd5e1; /* slate-300 - active states */
+
+  /* Text */
+  --catto-theme-text: #0f172a;
+  --catto-theme-text-muted: #475569;
+  --catto-theme-text-subtle: #64748b;
+  --catto-theme-text-inverse: #f8fafc;
+
+  /* Borders */
+  --catto-theme-border: #e2e8f0;
+  --catto-theme-border-subtle: #f1f5f9;
+  --catto-theme-border-strong: #cbd5e1;
+}
+
+/* Dark Mode (primary mode for NeonPulse) */
+[data-theme='neon-pulse'].dark,
+.dark[data-theme='neon-pulse'] {
+  /* Primary = Cyan (main accent, CTAs, links) */
+  --catto-theme-primary: #06b6d4; /* cyan-500 */
+  --catto-theme-primary-hover: #22d3ee; /* cyan-400 */
+  --catto-theme-primary-active: #0891b2; /* cyan-600 */
+  --catto-theme-on-primary: #0f172a;
+  --catto-theme-primary-subtle: #164e63; /* cyan-900 */
+
+  /* Secondary = Purple/Violet (secondary accents, gradients) */
+  --catto-theme-secondary: #8b5cf6; /* violet-500 */
+  --catto-theme-secondary-hover: #a78bfa; /* violet-400 */
+  --catto-theme-secondary-active: #7c3aed; /* violet-600 */
+  --catto-theme-on-secondary: #ffffff;
+  --catto-theme-secondary-subtle: #4c1d95; /* violet-900 */
+
+  /* Accent = Purple (for highlights, badges) */
+  --catto-theme-accent: #a855f7; /* purple-500 */
+  --catto-theme-accent-hover: #c084fc; /* purple-400 */
+  --catto-theme-on-accent: #ffffff;
+
+  /* Surfaces - Deep dark with purple tint */
+  --catto-theme-background: #0a0a0f; /* Near black with slight purple */
+  --catto-theme-surface: #12121a; /* Card backgrounds */
+  --catto-theme-surface-elevated: #1a1a24; /* Elevated cards, modals */
+  --catto-theme-surface-sunken: #050508; /* Inset areas */
+  --catto-theme-surface-secondary: #1a1a24; /* Elevated - hover states */
+  --catto-theme-surface-tertiary: #242430; /* Lighter - active states */
+
+  /* Text */
+  --catto-theme-text: #f3f4f6; /* gray-100 */
+  --catto-theme-text-muted: #9ca3af; /* gray-400 */
+  --catto-theme-text-subtle: #6b7280; /* gray-500 */
+  --catto-theme-text-inverse: #0f172a;
+
+  /* Borders - Subtle */
+  --catto-theme-border: #27272a; /* zinc-800 */
+  --catto-theme-border-subtle: #18181b; /* zinc-900 */
+  --catto-theme-border-strong: #3f3f46; /* zinc-700 */
+
+  /* Special: Gradient variables for buttons */
+  --catto-theme-gradient-start: #7c3aed; /* violet-600 */
+  --catto-theme-gradient-end: #06b6d4; /* cyan-500 */
+}
