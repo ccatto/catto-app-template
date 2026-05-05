@@ -19,7 +19,7 @@
 import { ReactNode, useEffect, useRef } from 'react';
 import { log } from '@app/lib/logger';
 import { Capacitor } from '@capacitor/core';
-import { usePushNotifications } from '@catto/react-push';
+import { usePushNotifications } from '@ccatto/react-push';
 import { apolloClient } from '@lib/apollo-client';
 import { useSession } from '@lib/auth-client-compat';
 import { REGISTER_PUSH_TOKEN } from '@lib/graphql/mutations/push-token.mutations';

@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { ButtonCatto, CardCatto } from '@catto/ui';
+import { ButtonCatto, CardCatto } from '@ccatto/ui';
 
 export default function HomePage() {
   const t = useTranslations('home');

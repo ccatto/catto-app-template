@@ -1,6 +1,6 @@
 // src/auth/auth.module.ts
 import { Module } from '@nestjs/common';
-import { CattoAuthModule } from '@catto/nest-auth';
+import { CattoAuthModule } from '@ccatto/nest-auth';
 import { AuthController } from './auth.controller';
 import { AuthServiceNew } from './auth.service.new';
 import { AuthService } from './auth.service';

@@ -1,3 +1,3 @@
-// Re-export from @catto/react-auth package
-export { sessionStore } from '@catto/react-auth';
-export type { CompatSession } from '@catto/react-auth';
+// Re-export from @ccatto/react-auth package
+export { sessionStore } from '@ccatto/react-auth';
+export type { CompatSession } from '@ccatto/react-auth';

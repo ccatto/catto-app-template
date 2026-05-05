@@ -1,4 +1,4 @@
-// Re-export from @catto/nest-auth package
+// Re-export from @ccatto/nest-auth package
 export {
   PasskeyRegistrationOptionsResponse,
   VerifyPasskeyRegistrationInput,
@@ -7,4 +7,4 @@ export {
   VerifyPasskeyAuthenticationInput,
   PasskeyInfo,
   PasskeyOperationResult,
-} from '@catto/nest-auth';
+} from '@ccatto/nest-auth';

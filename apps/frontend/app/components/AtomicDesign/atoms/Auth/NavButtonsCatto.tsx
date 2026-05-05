@@ -2,7 +2,7 @@
 // Supports both NextAuth (web/OAuth) and JWT (mobile/Capacitor) authentication
 'use client';
 
-import { LinkCatto, TooltipCatto } from '@catto/ui';
+import { LinkCatto, TooltipCatto } from '@ccatto/ui';
 import { Home, LayoutDashboard } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcherCatto from '@atomic-design/atoms/ControlsCatto/LanguageSwitcherCatto';

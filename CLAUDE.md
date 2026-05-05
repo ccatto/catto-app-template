@@ -19,7 +19,6 @@ catto-app-template/
 │   ├── backend/      # NestJS API (GraphQL)
 │   ├── database/     # Prisma ORM
 │   └── mobile/       # Capacitor iOS/Android wrapper
-├── packages/         # Shared @catto/* packages
 ├── docs/             # Documentation
 └── CLAUDE.md         # This file
 ```
@@ -58,7 +57,7 @@ const userId = session?.user?.id || jwtUser?.userId;
 
 ## Frontend Conventions
 
-- **Component Library**: Use `@catto/ui` components (ButtonCatto, CardCatto, etc.)
+- **Component Library**: Use `@ccatto/ui` components (ButtonCatto, CardCatto, etc.)
 - **i18n**: All user-facing text uses `next-intl`. Add keys to `en.json` and `es.json`.
 - **Styling**: Tailwind CSS v4, dark mode with `dark:` prefix
 - **State**: Zustand for global state, Apollo Client for server state

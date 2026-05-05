@@ -1,19 +1,19 @@
 'use client';
 
-// FormCatto - RLeaguez wrapper around @catto/ui FormCatto with next-intl translations
-// Re-exports FormCatto from @catto/ui with localized labels
+// FormCatto - RLeaguez wrapper around @ccatto/ui FormCatto with next-intl translations
+// Re-exports FormCatto from @ccatto/ui with localized labels
 import { JSX } from 'react';
 import { FieldValues, Path, SubmitHandler } from 'react-hook-form';
 import {
   FormCatto as FormCattoBase,
   FormCattoProps as FormCattoBaseProps,
   FormErrorActions,
-} from '@catto/ui';
+} from '@ccatto/ui';
 import { useTranslations } from 'next-intl';
 import { z } from 'zod';
 
-// Re-export types from @catto/ui
-export type { FormErrorActions, FormCattoLabels, FormField } from '@catto/ui';
+// Re-export types from @ccatto/ui
+export type { FormErrorActions, FormCattoLabels, FormField } from '@ccatto/ui';
 
 // Extend the base props to add RLeaguez-specific options
 interface IFormCattoProps<T extends FieldValues> {
@@ -54,7 +54,7 @@ interface IFormCattoProps<T extends FieldValues> {
 /**
  * FormCatto - RLeaguez form component with internationalized labels
  *
- * Wraps @catto/ui FormCatto with next-intl translations for labels.
+ * Wraps @ccatto/ui FormCatto with next-intl translations for labels.
  * Uses the 'common' translation namespace for: submit, submitting, cancel, error
  */
 const FormCatto = <T extends FieldValues>({

@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ToastCatto } from '@catto/ui';
+import { ToastCatto } from '@ccatto/ui';
 import { ToastPlacement, useToastStore } from '@zustand/useToastStore';
 
 function getPlacementStyle(placement: ToastPlacement, index: number) {

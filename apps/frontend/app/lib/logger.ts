@@ -1,4 +1,4 @@
-import { createBrowserLogger } from '@catto/logger';
+import { createBrowserLogger } from '@ccatto/logger';
 
 // Create the browser logger using the shared factory
 const logger = createBrowserLogger();

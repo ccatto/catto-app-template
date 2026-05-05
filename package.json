@@ -4,8 +4,7 @@
   "private": true,
   "license": "MIT",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ],
   "scripts": {
     "build": "yarn workspaces run build",
@@ -23,10 +22,10 @@
     "mobile:ios:open": "cd apps/mobile && yarn ios:open",
     "mobile:ios:run": "cd apps/mobile && yarn ios:run",
     "mobile:sync": "cd apps/mobile && yarn sync",
-    "postinstall": "yarn workspace @catto/ui build && yarn workspace @catto/logger build && yarn workspace @catto/react-auth build && yarn workspace @catto/react-contact build && yarn workspace @catto/shared build && yarn workspace @catto/nest-auth build && yarn workspace @catto/nest-email build && yarn workspace @catto/nest-sms build && yarn workspace @catto/nest-recaptcha build && yarn workspace @catto/nest-push build && yarn workspace @catto/nest-payments build",
+    "postinstall": "cd apps/database && npx prisma generate || true",
     "prettier": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern .",
     "prisma:generate": "cd apps/database && npx prisma generate",
-    "start": "yarn workspace @catto-app/frontend start",
+    "start": "yarn workspace @ccatto-app/frontend start",
     "test": "yarn workspaces run test",
     "test:e2e": "playwright test",
     "test:e2e:headed": "playwright test --headed",

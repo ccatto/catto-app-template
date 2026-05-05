@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ButtonCatto } from '@catto/ui';
+import { ButtonCatto } from '@ccatto/ui';
 import { useTranslations } from 'next-intl';
 import { signOut, useSession } from '@lib/auth-client-compat';
 import { useAuth } from '@lib/hooks/useAuth';

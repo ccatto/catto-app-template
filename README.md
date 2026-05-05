@@ -10,7 +10,7 @@ A production-ready, full-stack TypeScript monorepo template for building modern 
 - **Capacitor 8** for iOS and Android mobile apps
 - **Better Auth** + JWT dual authentication system
 - **Internationalization** (next-intl) with English and Spanish
-- **17 reusable @catto/* packages** (UI components, auth, push notifications, email, payments, and more)
+- **14 reusable @ccatto/* packages** consumed from npm (UI components, auth, push notifications, email, payments, and more)
 - **TurboRepo** for fast monorepo builds
 
 ## Quick Start
@@ -50,7 +50,6 @@ catto-app-template/
 │   ├── backend/      # NestJS (GraphQL API, auth, modules)
 │   ├── database/     # Prisma schema and migrations
 │   └── mobile/       # Capacitor (iOS/Android)
-├── packages/         # 17 reusable @catto/* packages
 ├── docs/             # Documentation
 └── CLAUDE.md         # AI context file
 ```

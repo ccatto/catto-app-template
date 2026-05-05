@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { CardCatto } from '@catto/ui';
+import { CardCatto } from '@ccatto/ui';
 import { useSession } from '@lib/auth-client-compat';
 
 export default function DashboardPage() {

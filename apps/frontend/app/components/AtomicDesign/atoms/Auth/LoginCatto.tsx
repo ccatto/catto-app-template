@@ -1,6 +1,6 @@
 'use client';
 
-import { CardCatto } from '@catto/ui';
+import { CardCatto } from '@ccatto/ui';
 import { useTranslations } from 'next-intl';
 import SignInEntireFormCatto from '@atomic-design//molecules/Auth/SignInEntireFormCatto';
 

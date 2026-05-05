@@ -20,12 +20,12 @@ import { GraphqlContextService } from './graphql/graphql-context.service';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
-// Optional @catto/* modules - uncomment as needed:
-// import { CattoEmailModule } from '@catto/nest-email';
-// import { CattoPaymentsModule } from '@catto/nest-payments';
-// import { CattoPushModule } from '@catto/nest-push';
-// import { CattoRecaptchaModule } from '@catto/nest-recaptcha';
-// import { CattoSmsModule } from '@catto/nest-sms';
+// Optional @ccatto/* modules - uncomment as needed:
+// import { CattoEmailModule } from '@ccatto/nest-email';
+// import { CattoPaymentsModule } from '@ccatto/nest-payments';
+// import { CattoPushModule } from '@ccatto/nest-push';
+// import { CattoRecaptchaModule } from '@ccatto/nest-recaptcha';
+// import { CattoSmsModule } from '@ccatto/nest-sms';
 
 @Module({
   imports: [
@@ -90,7 +90,7 @@ import { AppService } from './app.service';
     }),
 
     // -------------------------------------------------------
-    // Optional @catto/* modules - uncomment and configure:
+    // Optional @ccatto/* modules - uncomment and configure:
     // -------------------------------------------------------
     // CattoEmailModule.forRootAsync({
     //   imports: [ConfigModule],
