@@ -7,7 +7,7 @@ import {
   HttpStatus,
   UseGuards,
 } from '@nestjs/common';
-import { AuthServiceNew } from './auth.service.new';
+import { AuthService } from './auth.service';
 import {
   LoginDto,
   RegisterDto,
@@ -18,7 +18,7 @@ import { Throttle } from '@nestjs/throttler';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private authService: AuthServiceNew) {}
+  constructor(private authService: AuthService) {}
 
   /**
    * Register a new user

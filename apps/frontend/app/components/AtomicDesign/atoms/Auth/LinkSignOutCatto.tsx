@@ -1,7 +1,7 @@
 'use client';
 
 // Component atom auth Sign In Link Catto
-import { LinkCatto } from '@catto/ui';
+import { LinkCatto } from '@ccatto/ui';
 import { UserRound } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 

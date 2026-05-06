@@ -1,5 +1,5 @@
 // app/components/AtomicDesign/atoms/Auth/LinkSignInCatto.tsx
-import { LinkCatto } from '@catto/ui';
+import { LinkCatto } from '@ccatto/ui';
 import { UserRound } from 'lucide-react';
 
 const LinkSignInCatto = () => {

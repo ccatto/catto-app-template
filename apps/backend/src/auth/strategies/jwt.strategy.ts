@@ -1,2 +1,2 @@
-// Re-export from @catto/nest-auth package
-export { JwtStrategy } from '@catto/nest-auth';
+// Re-export from @ccatto/nest-auth package
+export { JwtStrategy } from '@ccatto/nest-auth';

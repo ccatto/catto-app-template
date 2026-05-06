@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 // import { FaGithub } from 'react-icons/fa';
-import { LoadingMessageAndCircleCatto, MellowModalCatto } from '@catto/ui';
+import { LoadingMessageAndCircleCatto, MellowModalCatto } from '@ccatto/ui';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { signIn } from '@lib/auth-client-compat';

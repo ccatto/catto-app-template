@@ -1,2 +1,2 @@
-// Re-export from @catto/nest-auth package
-export { DevAuthGuard } from '@catto/nest-auth';
+// Re-export from @ccatto/nest-auth package
+export { DevAuthGuard } from '@ccatto/nest-auth';

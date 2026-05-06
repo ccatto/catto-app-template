@@ -1,5 +1,5 @@
 // apps/frontend/app/components/AtomicDesign/atoms/ControlsCatto/LanguageSwitcherCatto.tsx
-// App-specific language switcher wrapper using @catto/ui component
+// App-specific language switcher wrapper using @ccatto/ui component
 'use client';
 
 import { useMemo } from 'react';
@@ -10,7 +10,7 @@ import {
   type LanguageOption,
   type LanguageSwitcherSize,
   type LanguageSwitcherVariant,
-} from '@catto/ui';
+} from '@ccatto/ui';
 import { useLocale } from 'next-intl';
 
 interface LanguageSwitcherCattoProps {
@@ -27,7 +27,7 @@ interface LanguageSwitcherCattoProps {
 /**
  * LanguageSwitcherCatto - App-specific language switcher
  *
- * This is a thin wrapper around @catto/ui's LanguageSwitcherCatto that:
+ * This is a thin wrapper around @ccatto/ui's LanguageSwitcherCatto that:
  * 1. Provides the app's locale configuration (locales, names, flags)
  * 2. Handles next-intl routing when language changes
  * 3. Preserves scroll position during navigation

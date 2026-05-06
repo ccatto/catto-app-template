@@ -1,6 +1,6 @@
 // apps/backend/src/prisma/prisma.service.ts
 import { Injectable, OnModuleInit, OnModuleDestroy } from '@nestjs/common';
-import { PrismaClient } from '@catto-app/database';
+import { PrismaClient } from '@ccatto-app/database';
 import { PrismaNeon } from '@prisma/adapter-neon';
 
 @Injectable()

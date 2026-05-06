@@ -1,9 +1,9 @@
 /**
  * NoProfanity Validator Tests - Content moderation decorator
  *
- * Tests the custom class-validator decorator that uses @catto/profanity isProfane().
+ * Tests the custom class-validator decorator that uses @ccatto/profanity isProfane().
  */
-import { isProfane } from '@catto/profanity';
+import { isProfane } from '@ccatto/profanity';
 
 // We test the underlying isProfane function directly since the decorator
 // is a thin wrapper around registerDecorator that calls isProfane.

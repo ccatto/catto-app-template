@@ -1,15 +1,15 @@
 /* app/ui/global.css */
 @import 'tailwindcss';
 
-/* Import @catto/ui theme CSS files */
-@import '@catto/ui/themes/tokens.css';
-@import '@catto/ui/themes/rleaguez.css';
-@import '@catto/ui/themes/neon-pulse.css';
-@import '@catto/ui/themes/royal-crown.css';
-@import '@catto/ui/themes/corporate-steel.css';
-@import '@catto/ui/themes/forest-earth.css';
+/* Import @ccatto/ui theme CSS files */
+@import '@ccatto/ui/themes/tokens.css';
+@import '@ccatto/ui/themes/rleaguez.css';
+@import '@ccatto/ui/themes/neon-pulse.css';
+@import '@ccatto/ui/themes/royal-crown.css';
+@import '@ccatto/ui/themes/corporate-steel.css';
+@import '@ccatto/ui/themes/forest-earth.css';
 
-/* Scan @catto/ui package for Tailwind classes */
+/* Scan @ccatto/ui package for Tailwind classes */
 @source "../../../../packages/ui/dist";
 
 @custom-variant dark (&:is(.dark *));

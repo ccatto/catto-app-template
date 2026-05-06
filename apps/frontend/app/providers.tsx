@@ -1,7 +1,7 @@
 'use client';
 
 import { ApolloProvider } from '@apollo/client';
-import { ThemeProvider } from '@catto/ui';
+import { ThemeProvider } from '@ccatto/ui';
 import ZustandHydration from '@zustand/ZustandHydration';
 import ThemeProviderCatto from '@atomic-design/atoms/Utils/ThemeProviderCatto';
 import { apolloClient } from '@lib/apollo-client';

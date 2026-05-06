@@ -23,7 +23,7 @@ COPY apps/backend ./apps/backend
 COPY apps/database ./apps/database
 
 # 4 Install dependencies with --ignore-platform flag to bypass Node version check
-# Use --ignore-scripts to skip postinstall (which tries to build @catto/ui) since backend doesn't need it
+# Use --ignore-scripts to skip postinstall (which tries to build @ccatto/ui) since backend doesn't need it
 RUN yarn install --frozen-lockfile --ignore-platform --ignore-scripts
 
 # 5 Generate Prisma 7 client (single invocation, output goes to apps/database/generated/)
@@ -59,8 +59,8 @@ COPY --from=builder /app/apps/database/prisma ./apps/database/prisma
 COPY --from=builder /app/packages/ui/dist ./packages/ui/dist
 
 # Install only production dependencies
-# Remove the root postinstall script to prevent @catto/ui rebuild (dist already copied)
-# This allows bcrypt native module to be built while skipping @catto/ui build
+# Remove the root postinstall script to prevent @ccatto/ui rebuild (dist already copied)
+# This allows bcrypt native module to be built while skipping @ccatto/ui build
 RUN npm pkg delete scripts.postinstall && \
     yarn install --production --frozen-lockfile --ignore-platform
 

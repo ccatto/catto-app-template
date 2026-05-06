@@ -7,7 +7,7 @@
  * @see https://www.better-auth.com/docs/installation
  */
 
-import { prisma } from '@catto-app/database';
+import { prisma } from '@ccatto-app/database';
 import { betterAuth } from 'better-auth';
 import { prismaAdapter } from 'better-auth/adapters/prisma';
 import { nextCookies } from 'better-auth/next-js';

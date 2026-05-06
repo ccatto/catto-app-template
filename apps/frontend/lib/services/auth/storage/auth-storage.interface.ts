@@ -1,2 +1,2 @@
-// Re-export from @catto/react-auth package
-export type { IAuthStorage } from '@catto/react-auth';
+// Re-export from @ccatto/react-auth package
+export type { IAuthStorage } from '@ccatto/react-auth';

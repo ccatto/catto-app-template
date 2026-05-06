@@ -62,7 +62,6 @@ your-app/
 │   ├── backend/      # NestJS (GraphQL API)
 │   ├── database/     # Prisma ORM
 │   └── mobile/       # Capacitor (iOS/Android wrapper)
-├── packages/         # Shared @catto/* packages
 ├── docs/             # Documentation
 ├── turbo.json        # TurboRepo config
 └── package.json      # Root workspace
@@ -77,12 +76,13 @@ your-app/
 3. **Frontend**: Create pages in `apps/frontend/app/[locale]/...`, add GraphQL queries in `lib/graphql/`, create components in `app/components/`
 4. **i18n**: Add translation keys to `messages/en.json` and `messages/es.json`
 
-### Add a New @catto/* Package
+### Add or Update a @ccatto/* Package
 
-1. Create the package in `packages/your-package/`
-2. Follow the pattern from existing packages (tsup build, vitest tests)
-3. Add it to `apps/frontend/package.json` or `apps/backend/package.json`
-4. Run `yarn install` to link the workspace
+Packages live in the sister repo [`catto-packages`](https://github.com/ccatto/catto-packages):
+
+1. Open `catto-packages` and add or modify the package there.
+2. Bump the version in its `package.json` and merge to `main` — CI auto-publishes to npm.
+3. Back in this repo, bump the version in `apps/frontend/package.json` or `apps/backend/package.json` and run `yarn install`.
 
 ### Add a New Language
 
@@ -118,22 +118,22 @@ See the deployment section in CLAUDE.md for commands. General flow:
 
 | Package | Purpose |
 |---------|---------|
-| `@catto/ui` | Component library (ButtonCatto, CardCatto, etc.) |
-| `@catto/logger` | Pino logger interface |
-| `@catto/react-auth` | Frontend auth hooks |
-| `@catto/react-contact` | Contact form hooks |
-| `@catto/react-mobile` | Capacitor mobile hooks |
-| `@catto/react-push` | Push notification hooks |
-| `@catto/profanity` | Content moderation |
-| `@catto/shared` | Shared types/utils |
-| `@catto/nest-auth` | Backend auth module |
-| `@catto/nest-email` | SendGrid email |
-| `@catto/nest-payments` | Stripe payments |
-| `@catto/nest-push` | Firebase push |
-| `@catto/nest-recaptcha` | reCAPTCHA verification |
-| `@catto/nest-sms` | Telnyx SMS |
+| `@ccatto/ui` | Component library (ButtonCatto, CardCatto, etc.) |
+| `@ccatto/logger` | Pino logger interface |
+| `@ccatto/react-auth` | Frontend auth hooks |
+| `@ccatto/react-contact` | Contact form hooks |
+| `@ccatto/react-mobile` | Capacitor mobile hooks |
+| `@ccatto/react-push` | Push notification hooks |
+| `@ccatto/profanity` | Content moderation |
+| `@ccatto/shared` | Shared types/utils |
+| `@ccatto/nest-auth` | Backend auth module |
+| `@ccatto/nest-email` | SendGrid email |
+| `@ccatto/nest-payments` | Stripe payments |
+| `@ccatto/nest-push` | Firebase push |
+| `@ccatto/nest-recaptcha` | reCAPTCHA verification |
+| `@ccatto/nest-sms` | Telnyx SMS |
 
-> **Note**: These packages are currently copied into the `packages/` directory. In a future phase, they will be published to npm and referenced as external dependencies.
+> **Note**: These packages are consumed from npm under the `@ccatto` scope. Source lives in the sister repo [`catto-packages`](https://github.com/ccatto/catto-packages) — to iterate on a package, edit there, bump the version, and merge to `main` to auto-publish.
 
 ## Tech Stack
 

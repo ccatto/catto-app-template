@@ -1,1 +1,0 @@
-export const CATTO_PUSH_CONFIG = 'CATTO_PUSH_CONFIG';
