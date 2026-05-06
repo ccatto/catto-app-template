@@ -10,7 +10,7 @@ import {
 } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
 import { Throttle } from '@nestjs/throttler';
-import { AuthServiceNew } from './auth.service.new';
+import { AuthService } from './auth.service';
 import { WebAuthnService } from './webauthn.service';
 import { GqlAuthGuard } from './guards/gql-auth.guard';
 import { CurrentUser } from './decorators/current-user.decorator';
@@ -36,9 +36,6 @@ export class RegisterInput {
 
   @Field()
   name: string;
-
-  @Field({ nullable: true })
-  phoneNumber?: string;
 }
 
 @InputType()
@@ -64,24 +61,6 @@ export class AuthUser {
 
   @Field()
   role: string;
-
-  @Field({ nullable: true })
-  playerID?: number;
-
-  @Field({ nullable: true })
-  organizationId?: string;
-}
-
-@ObjectType()
-export class LinkedProfileInfo {
-  @Field()
-  playerId: number;
-
-  @Field()
-  name: string;
-
-  @Field()
-  linkedMethod: string;
 }
 
 @ObjectType()
@@ -94,12 +73,6 @@ export class AuthResponse {
 
   @Field(() => AuthUser)
   user: AuthUser;
-
-  @Field({ nullable: true })
-  linkedProfileCount?: number;
-
-  @Field(() => [LinkedProfileInfo], { nullable: true })
-  linkedProfiles?: LinkedProfileInfo[];
 }
 
 @ObjectType()
@@ -132,7 +105,7 @@ export class ResetPasswordResponse {
 @Resolver()
 export class AuthResolver {
   constructor(
-    private authService: AuthServiceNew,
+    private authService: AuthService,
     private webAuthnService: WebAuthnService,
   ) {}
 
@@ -148,7 +121,6 @@ export class AuthResolver {
       email: input.email,
       password: input.password,
       name: input.name,
-      phoneNumber: input.phoneNumber,
     });
   }
 

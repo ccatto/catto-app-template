@@ -5,6 +5,7 @@ import {
   ConflictException,
 } from '@nestjs/common';
 import { PrismaService } from '@src/prisma/prisma.service';
+import { UserRole } from '@ccatto-app/database';
 import { User } from './entities/user.entity';
 import { CreateUserInput, UpdateUserInput, WhereUserInput } from './dto/user.dto';
 import * as bcrypt from 'bcrypt';
@@ -53,7 +54,7 @@ export class UsersService {
       data: {
         ...data,
         password: hashedPassword,
-        role: data.role || 'user',
+        role: (data.role as UserRole) || UserRole.user,
       },
     });
   }
@@ -88,7 +89,12 @@ export class UsersService {
 
     return this.prisma.client.user.update({
       where: { id },
-      data: updateData,
+      data: {
+        ...updateData,
+        ...(updateData.role !== undefined && {
+          role: updateData.role as UserRole,
+        }),
+      },
     });
   }
 

@@ -17,7 +17,7 @@ import type {
   RegistrationResponseJSON,
   AuthenticationResponseJSON,
   AuthenticatorTransportFuture,
-} from '@simplewebauthn/server';
+} from '@simplewebauthn/types';
 
 // In-memory challenge store with TTL
 interface StoredChallenge {

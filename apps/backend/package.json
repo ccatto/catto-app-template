@@ -39,6 +39,8 @@
     "@ccatto/logger": "^1.0.0",
     "@ccatto/nest-auth": "^1.0.0",
     "@ccatto/profanity": "^1.0.0",
+    "@simplewebauthn/server": "^11.0.0",
+    "@simplewebauthn/types": "^11.0.0",
     "bcrypt": "^5.1.1",
     "cache-manager": "^7.2.8",
     "class-transformer": "^0.5.1",

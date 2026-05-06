@@ -22,7 +22,7 @@
     "mobile:ios:open": "cd apps/mobile && yarn ios:open",
     "mobile:ios:run": "cd apps/mobile && yarn ios:run",
     "mobile:sync": "cd apps/mobile && yarn sync",
-    "postinstall": "cd apps/database && npx prisma generate || true",
+    "postinstall": "yarn workspace @ccatto-app/database prisma generate",
     "prettier": "prettier --write --ignore-unknown --no-error-on-unmatched-pattern .",
     "prisma:generate": "cd apps/database && npx prisma generate",
     "start": "yarn workspace @ccatto-app/frontend start",
