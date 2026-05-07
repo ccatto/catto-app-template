@@ -2,7 +2,7 @@
 
 import { CardCatto } from '@ccatto/ui';
 import { useTranslations } from 'next-intl';
-import SignInEntireFormCatto from '@atomic-design//molecules/Auth/SignInEntireFormCatto';
+import SignInEmailPassFormCatto from '@atomic-design/molecules/Auth/SignInEmailPassFormCatto';
 
 const LoginCatto = () => {
   const t = useTranslations('auth');
@@ -14,7 +14,7 @@ const LoginCatto = () => {
           title={t('signIn.cardTitle')}
           width="5xl"
           variant="midnightEmber"
-          headerComponent={<SignInEntireFormCatto />}
+          headerComponent={<SignInEmailPassFormCatto />}
         />
       </div>
     </>

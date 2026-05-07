@@ -8,7 +8,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "prepare": "prisma generate"
+    "prepare": "prisma generate && tsc"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",

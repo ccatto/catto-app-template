@@ -9,7 +9,8 @@ import { ValidationPipe } from '@nestjs/common';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { LoggerModule } from 'nestjs-pino';
-import { GraphQLJSON } from 'graphql-scalars';
+// import { GraphQLJSON } from 'graphql-scalars';
+// ^ re-enable when a resolver uses @Field(() => GraphQLJSON), then add `resolvers: { JSON: GraphQLJSON }` below
 
 import { GraphqlThrottlerGuard } from './common/guards/graphql-throttler.guard';
 import { PrismaModule } from './prisma/prisma.module';
@@ -66,7 +67,7 @@ import { AppService } from './app.service';
       useFactory: (contextService: GraphqlContextService) => ({
         autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
         sortSchema: true,
-        resolvers: { JSON: GraphQLJSON },
+        // resolvers: { JSON: GraphQLJSON },  // re-enable when a resolver uses GraphQLJSON
         context: ({ req, connection }) => {
           if (connection) {
             return connection.context;

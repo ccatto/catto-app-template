@@ -7,7 +7,7 @@ import ThemeProviderCatto from '@atomic-design/atoms/Utils/ThemeProviderCatto';
 import { apolloClient } from '@lib/apollo-client';
 import { BetterSessionProvider } from '@lib/auth-client-better';
 import NetworkStatusProvider from './components/Providers/NetworkStatusProvider';
-import PushNotificationProvider from './components/Providers/PushNotificationProvider';
+// Push notifications: opt-in per app via @ccatto/react-push (not in baseline template)
 import SessionSync from './components/Providers/SessionSync';
 import ToastContainerCatto from './components/Utils/Toast/ToastContainerCatto';
 import TopLoader from './components/Utils/Toploader/Toploader';
@@ -19,18 +19,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <SessionSync />
         <ZustandHydration />
         {/* Color theme provider */}
-        <ThemeProvider defaultTheme="default">
+        <ThemeProvider defaultTheme="corporate-steel">
           {/* Dark/light mode provider */}
           <ThemeProviderCatto>
             <TopLoader />
             <ToastContainerCatto />
-            {/* Push notifications for mobile apps */}
-            <PushNotificationProvider>
-              {/* Network status banner */}
-              <NetworkStatusProvider>
-                {children}
-              </NetworkStatusProvider>
-            </PushNotificationProvider>
+            {/* Network status banner */}
+            <NetworkStatusProvider>{children}</NetworkStatusProvider>
           </ThemeProviderCatto>
         </ThemeProvider>
       </BetterSessionProvider>
