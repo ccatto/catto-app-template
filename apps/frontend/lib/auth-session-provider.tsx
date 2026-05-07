@@ -78,8 +78,6 @@ export function BetterSessionProvider({
               name: baseSession.data.user.name ?? null,
               image: baseSession.data.user.image ?? null,
               role: 'user',
-              organizationId: null,
-              organizations: [],
             },
             session: baseSession.data.session,
           });
@@ -95,8 +93,6 @@ export function BetterSessionProvider({
             name: baseSession.data.user.name ?? null,
             image: baseSession.data.user.image ?? null,
             role: 'user',
-            organizationId: null,
-            organizations: [],
           },
           session: baseSession.data.session,
         });

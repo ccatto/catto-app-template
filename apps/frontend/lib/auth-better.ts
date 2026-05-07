@@ -95,7 +95,7 @@ export async function getEnrichedSession(
         id: session.user.id,
         email: session.user.email,
         name: session.user.name,
-        image: user?.image || session.user.image,
+        image: user?.image ?? session.user.image ?? null,
         role: user?.role || 'user',
         // TODO: Add your custom enrichment (e.g., organizations, permissions)
       },

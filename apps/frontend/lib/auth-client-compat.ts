@@ -18,26 +18,15 @@ import {
   type EnrichedSession,
 } from './auth-client-better';
 import { sessionStore } from './stores/session-store';
+import type {
+  CompatSession,
+  CompatSessionUser,
+} from '@ccatto/react-auth';
 
 // =============================================================================
-// Types
+// Types (re-exported from @ccatto/react-auth)
 // =============================================================================
-
-/**
- * Simplified session user type for the template.
- */
-export interface CompatSessionUser {
-  id: string;
-  email: string;
-  name: string | null;
-  image: string | null;
-  role: string;
-}
-
-export interface CompatSession {
-  user: CompatSessionUser;
-  expires: string;
-}
+export type { CompatSession, CompatSessionUser };
 
 // =============================================================================
 // Hooks
@@ -144,6 +133,11 @@ function mapEnrichedToCompat(enriched: EnrichedSession): CompatSession {
       name: enriched.user.name,
       image: enriched.user.image,
       role: enriched.user.role,
+      // @ccatto/react-auth's CompatSessionUser carries product-specific fields
+      // (organizationId, organizations). Default to empty in the baseline; apps
+      // with an orgs concept should populate these in their auth enrichment hook.
+      organizationId: null,
+      organizations: [],
     },
     expires:
       enriched.session.expiresAt instanceof Date
