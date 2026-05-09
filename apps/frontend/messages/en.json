@@ -21,7 +21,6 @@
     "no": "No"
   },
   "auth": {
-    "signIn": "Sign In",
     "signOut": "Sign Out",
     "signUp": "Sign Up",
     "email": "Email",
@@ -31,10 +30,30 @@
     "alreadyHaveAccount": "Already have an account?",
     "dontHaveAccount": "Don't have an account?",
     "signInPageTitle": "Sign In",
+    "registerPageTitle": "Create your account",
     "tagline": "Welcome back",
     "orContinueWith": "Or continue with",
     "name": "Name",
-    "confirmPassword": "Confirm password"
+    "confirmPassword": "Confirm password",
+    "registerHere": "Register here",
+    "signInHere": "Sign in here",
+    "signIn": {
+      "cardTitle": "Sign in to your account",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "errorGeneric": "Sign in failed. Check your credentials and try again."
+    },
+    "register": {
+      "cardTitle": "Create your account",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "submit": "Create account",
+      "submitting": "Creating account…",
+      "errorGeneric": "Could not create your account. Try again or contact support."
+    }
   },
   "navigation": {
     "home": "Home",
@@ -46,7 +65,8 @@
   "dashboard": {
     "title": "Dashboard",
     "welcome": "Welcome to your dashboard",
-    "description": "This is a protected page that requires authentication."
+    "description": "This is a protected page that requires authentication.",
+    "loading": "Loading…"
   },
   "about": {
     "title": "About",
@@ -58,5 +78,27 @@
     "description": "A modern full-stack application built with Next.js, NestJS, and Prisma.",
     "getStarted": "Get Started",
     "learnMore": "Learn More"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "defaultSubtitle": "Something went wrong",
+    "defaultDescription": "We couldn't find what you were looking for. The page may have moved or never existed.",
+    "internalServerError": "An internal server error occurred. Please try again later.",
+    "unableToLinkAccount": "We couldn't link that account. It may already be in use.",
+    "accessDenied": "You don't have permission to access that resource.",
+    "signInFailed": "Sign in failed. Check your credentials and try again.",
+    "accountNotFound": "We couldn't find an account matching those credentials.",
+    "auth": {
+      "title": "Authentication problem",
+      "defaultSubtitle": "We hit a snag signing you in",
+      "defaultDescription": "Try signing in again. If the problem persists, contact support.",
+      "internalServerError": "An internal server error occurred while signing you in.",
+      "unableToLinkAccount": "We couldn't link that account. It may already be in use.",
+      "accessDenied": "You don't have permission to access that resource.",
+      "signInFailed": "Sign in failed. Check your credentials and try again.",
+      "accountNotFound": "We couldn't find an account matching those credentials.",
+      "signIn": "Sign in",
+      "goHome": "Go home"
+    }
   }
 }
