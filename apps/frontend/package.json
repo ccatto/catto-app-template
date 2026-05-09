@@ -31,6 +31,7 @@
     "@capacitor/network": "^8.0.0",
     "@capacitor/preferences": "^8.0.0",
     "@capacitor/push-notifications": "^8.0.0",
+    "@ccatto/auth-ui": "^0.1.0",
     "@ccatto/logger": "^1.0.0",
     "@ccatto/profanity": "^1.0.0",
     "@ccatto/react-auth": "^1.0.0",
