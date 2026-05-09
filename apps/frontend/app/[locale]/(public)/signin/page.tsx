@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import { Link } from '@/navigation';
 import LoginCatto from '@atomic-design/atoms/Auth/LoginCatto';
 import JumbotronFlexibleCatto from '@atomic-design/molecules/JumbotronCattoFlexible';
 
@@ -35,6 +36,15 @@ const Page = async () => {
         />
       </div>
       <LoginCatto />
+      <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-300">
+        {t('dontHaveAccount')}{' '}
+        <Link
+          href="/signin/register"
+          className="font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400"
+        >
+          {t('registerHere')}
+        </Link>
+      </p>
       <hr className="m-3" />
     </>
   );
