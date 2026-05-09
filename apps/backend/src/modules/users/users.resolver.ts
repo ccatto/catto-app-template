@@ -26,7 +26,7 @@ export class UsersResolver {
   }
 
   @UseGuards(GqlAuthGuard, RolesGuard)
-  @Roles('admin')
+  @Roles('platform_admin')
   @Mutation(() => User)
   async createUser(@Args('data') data: CreateUserInput): Promise<User> {
     return this.usersService.create(data);
@@ -39,7 +39,7 @@ export class UsersResolver {
   }
 
   @UseGuards(GqlAuthGuard, RolesGuard)
-  @Roles('admin')
+  @Roles('platform_admin')
   @Mutation(() => User)
   async deleteUser(@Args('id', { type: () => ID }) id: string): Promise<User> {
     return this.usersService.remove(id);
