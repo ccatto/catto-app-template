@@ -699,6 +699,11 @@
   resolved "https://registry.yarnpkg.com/@capacitor/status-bar/-/status-bar-8.0.2.tgz#bf2900c1a79b4481f71cd841d46050895d28d9fe"
   integrity sha512-WXs8YB8B9eEaPZz+bcdY6t2nForF1FLoj/JU0Dl9RRgQnddnS98FEEyDooQhaY7wivr000j4+SC1FyeJkrFO7A==
 
+"@ccatto/auth-ui@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@ccatto/auth-ui/-/auth-ui-0.1.0.tgz#3f6dd5120cc19823d6f4d3ae77b569af7d4ffff7"
+  integrity sha512-kXx0OnqtU0WwLCrugu0o5jDXcO3g7vlH7n+SWQ7G5wqoVR7WfbHP4pxm4mQ8+y1Or7S3FqBdRlI1lo2cnE/tjA==
+
 "@ccatto/logger@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@ccatto/logger/-/logger-1.0.0.tgz#dc08a2dba80d728589a918d791316b7971ed0d18"

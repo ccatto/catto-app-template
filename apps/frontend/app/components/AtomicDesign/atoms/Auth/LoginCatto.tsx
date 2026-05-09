@@ -1,23 +1,22 @@
 'use client';
 
-import { CardCatto } from '@ccatto/ui';
-import { useTranslations } from 'next-intl';
-import SignInEmailPassFormCatto from '@atomic-design/molecules/Auth/SignInEmailPassFormCatto';
+import { LoginCatto as LoginCattoUI } from '@ccatto/auth-ui';
+import { signIn } from '@lib/auth-client-better';
+import { useRouter } from '@/navigation';
 
 const LoginCatto = () => {
-  const t = useTranslations('auth');
+  const router = useRouter();
 
   return (
-    <>
-      <div className="mt-6 h-full">
-        <CardCatto
-          title={t('signIn.cardTitle')}
-          width="5xl"
-          variant="midnightEmber"
-          headerComponent={<SignInEmailPassFormCatto />}
-        />
-      </div>
-    </>
+    <LoginCattoUI
+      onSubmit={async ({ email, password }) => {
+        const result = await signIn.email({ email, password });
+        if (result?.error) {
+          throw new Error(result.error.message ?? 'Sign in failed');
+        }
+        router.push('/dashboard');
+      }}
+    />
   );
 };
 
