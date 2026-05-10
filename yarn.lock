@@ -699,10 +699,10 @@
   resolved "https://registry.yarnpkg.com/@capacitor/status-bar/-/status-bar-8.0.2.tgz#bf2900c1a79b4481f71cd841d46050895d28d9fe"
   integrity sha512-WXs8YB8B9eEaPZz+bcdY6t2nForF1FLoj/JU0Dl9RRgQnddnS98FEEyDooQhaY7wivr000j4+SC1FyeJkrFO7A==
 
-"@ccatto/auth-ui@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@ccatto/auth-ui/-/auth-ui-0.1.0.tgz#3f6dd5120cc19823d6f4d3ae77b569af7d4ffff7"
-  integrity sha512-kXx0OnqtU0WwLCrugu0o5jDXcO3g7vlH7n+SWQ7G5wqoVR7WfbHP4pxm4mQ8+y1Or7S3FqBdRlI1lo2cnE/tjA==
+"@ccatto/auth-ui@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@ccatto/auth-ui/-/auth-ui-0.2.0.tgz#8bd4b6687e832ccc88a99ef41c101f7e0c7786ed"
+  integrity sha512-3JbKnMdQgnhWDgyne0RTW0y7GxadMCm1AnlnOZIIs+QMePYHzJxYxMIZcuuVfR+NMQCdhd7fF8afqyKhisUm1Q==
 
 "@ccatto/logger@^1.0.0":
   version "1.0.0"
@@ -733,10 +733,10 @@
   dependencies:
     "@ccatto/logger" "^1.0.0"
 
-"@ccatto/ui@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@ccatto/ui/-/ui-1.1.0.tgz#2be63a825c1b40808d1d92849a889de507eafd63"
-  integrity sha512-sPWbyjaFcB6hlpS7/VlElQ+ZTG0Hbv5kBN3qZBbhPAnHn2x7U3oIrMBNQV/Pt3T+RyUUr6h2YPlwePg8JaiKZQ==
+"@ccatto/ui@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@ccatto/ui/-/ui-1.2.0.tgz#97b4551d306ad46a57d2209b2d46fb5a43de34a2"
+  integrity sha512-IKeIyLwEYYrXqmHqzG+SEPJ1A4//POLw+GBRWEFXY2xQ7rAHICW17JxppTsOjNsgyTZh9E7jsYlLD4aYFPjpiA==
   dependencies:
     class-variance-authority "^0.7.0"
     clsx "^2.1.0"
