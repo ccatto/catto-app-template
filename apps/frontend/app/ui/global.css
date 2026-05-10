@@ -7,6 +7,10 @@
 @import '@ccatto/ui/themes/royal-crown.css';
 @import '@ccatto/ui/themes/corporate-steel.css';
 @import '@ccatto/ui/themes/forest-earth.css';
+/* Maps every --catto-theme-* token to a Tailwind --color-theme-* class
+   so utilities like text-theme-on-primary, bg-theme-success, etc. resolve.
+   Replaces a manual @theme mirror that had to track tokens by hand. */
+@import '@ccatto/ui/themes/tailwind-tokens.css';
 
 /* Scan @ccatto/* packages for Tailwind classes (installed from npm) */
 @source "../../../../node_modules/@ccatto/ui/dist";
@@ -59,47 +63,7 @@
   --color-catto-border: hsl(var(--catto-border));
   --color-catto-ring: hsl(var(--catto-ring));
 
-  /* Semantic theme colors — mirror every --catto-theme-* token from
-     @ccatto/ui's themes/tokens.css so utility classes like
-     `bg-theme-primary`, `text-theme-on-primary`, `bg-theme-success`,
-     etc. all resolve. Without these, components fall back to inherited
-     colors and can render unreadably (e.g. button text). */
-  --color-theme-primary: var(--catto-theme-primary);
-  --color-theme-primary-hover: var(--catto-theme-primary-hover);
-  --color-theme-primary-active: var(--catto-theme-primary-active);
-  --color-theme-primary-subtle: var(--catto-theme-primary-subtle);
-  --color-theme-on-primary: var(--catto-theme-on-primary);
-  --color-theme-secondary: var(--catto-theme-secondary);
-  --color-theme-secondary-hover: var(--catto-theme-secondary-hover);
-  --color-theme-secondary-active: var(--catto-theme-secondary-active);
-  --color-theme-secondary-subtle: var(--catto-theme-secondary-subtle);
-  --color-theme-on-secondary: var(--catto-theme-on-secondary);
-  --color-theme-accent: var(--catto-theme-accent);
-  --color-theme-accent-hover: var(--catto-theme-accent-hover);
-  --color-theme-on-accent: var(--catto-theme-on-accent);
-  --color-theme-background: var(--catto-theme-background);
-  --color-theme-surface: var(--catto-theme-surface);
-  --color-theme-surface-elevated: var(--catto-theme-surface-elevated);
-  --color-theme-surface-sunken: var(--catto-theme-surface-sunken);
-  --color-theme-text: var(--catto-theme-text);
-  --color-theme-text-muted: var(--catto-theme-text-muted);
-  --color-theme-text-subtle: var(--catto-theme-text-subtle);
-  --color-theme-text-inverse: var(--catto-theme-text-inverse);
-  --color-theme-border: var(--catto-theme-border);
-  --color-theme-border-strong: var(--catto-theme-border-strong);
-  --color-theme-border-subtle: var(--catto-theme-border-subtle);
-  --color-theme-success: var(--catto-theme-success);
-  --color-theme-success-subtle: var(--catto-theme-success-subtle);
-  --color-theme-on-success: var(--catto-theme-on-success);
-  --color-theme-warning: var(--catto-theme-warning);
-  --color-theme-warning-subtle: var(--catto-theme-warning-subtle);
-  --color-theme-on-warning: var(--catto-theme-on-warning);
-  --color-theme-error: var(--catto-theme-error);
-  --color-theme-error-subtle: var(--catto-theme-error-subtle);
-  --color-theme-on-error: var(--catto-theme-on-error);
-  --color-theme-info: var(--catto-theme-info);
-  --color-theme-info-subtle: var(--catto-theme-info-subtle);
-  --color-theme-on-info: var(--catto-theme-on-info);
+  /* Theme colors live in @ccatto/ui/themes/tailwind-tokens.css (imported above). */
 
   /* Basic animations */
   --animate-fade-in: fadeIn 0.3s ease-out;
