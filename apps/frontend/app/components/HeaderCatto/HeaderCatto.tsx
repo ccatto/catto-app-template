@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { UserMenuDropdownCatto } from '@ccatto/ui';
+import { ThemeToggleCatto, UserMenuDropdownCatto } from '@ccatto/ui';
 import { useSession, signOut } from '@lib/auth-client-compat';
 import { useRouter } from '@/navigation';
 
@@ -36,6 +36,7 @@ export default function HeaderCatto() {
           >
             {t('about')}
           </Link>
+          <ThemeToggleCatto />
           {session?.user ? (
             <UserMenuDropdownCatto
               user={{
