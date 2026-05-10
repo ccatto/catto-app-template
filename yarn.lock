@@ -733,10 +733,10 @@
   dependencies:
     "@ccatto/logger" "^1.0.0"
 
-"@ccatto/ui@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@ccatto/ui/-/ui-1.4.0.tgz#64a49720d6b44bb1c9e0baa7bfc4f723623868f0"
-  integrity sha512-x5GUA6RYD4izz8RqaKm7P6eBEG5uGwrYtppDucWJCNRv2wC0zTRYgTyqjpTFvJlGG42bQ4zRYGMJB5/VZVg3cg==
+"@ccatto/ui@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@ccatto/ui/-/ui-1.5.0.tgz#6d3c02a2e93fdf1f722cbb0daa48c74543ce2da1"
+  integrity sha512-LAmPND5zojKZPj6bx29fXukJ0a6kmTFO0pUGclVxjzpY+oqY+C40JvnP+GPWfAMm1vT8yfR8lwl9bw1IgHykvg==
   dependencies:
     class-variance-authority "^0.7.0"
     clsx "^2.1.0"
