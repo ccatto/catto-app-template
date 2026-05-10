@@ -53,13 +53,24 @@
       "submit": "Crear cuenta",
       "submitting": "Creando cuenta…",
       "errorGeneric": "No pudimos crear tu cuenta. Intentalo otra vez o contacta a soporte."
-    }
+    },
+    "profile": {
+      "cardTitle": "Tu perfil",
+      "nameLabel": "Nombre",
+      "emailLabel": "Correo electronico",
+      "submit": "Guardar cambios",
+      "submitting": "Guardando…",
+      "errorGeneric": "No pudimos guardar tu perfil. Intentalo otra vez o contacta a soporte.",
+      "successMessage": "Perfil actualizado"
+    },
+    "profilePageTitle": "Tu perfil"
   },
   "navigation": {
     "home": "Inicio",
     "about": "Acerca de",
     "dashboard": "Panel",
     "account": "Cuenta",
+    "profile": "Perfil",
     "signIn": "Iniciar sesion"
   },
   "dashboard": {

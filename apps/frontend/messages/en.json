@@ -53,13 +53,24 @@
       "submit": "Create account",
       "submitting": "Creating account…",
       "errorGeneric": "Could not create your account. Try again or contact support."
-    }
+    },
+    "profile": {
+      "cardTitle": "Your profile",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "submit": "Save changes",
+      "submitting": "Saving…",
+      "errorGeneric": "Could not save your profile. Try again or contact support.",
+      "successMessage": "Profile updated"
+    },
+    "profilePageTitle": "Your profile"
   },
   "navigation": {
     "home": "Home",
     "about": "About",
     "dashboard": "Dashboard",
     "account": "Account",
+    "profile": "Profile",
     "signIn": "Sign In"
   },
   "dashboard": {
