@@ -9,8 +9,9 @@
 @import '@ccatto/ui/themes/corporate-steel.css';
 @import '@ccatto/ui/themes/forest-earth.css';
 
-/* Scan @ccatto/ui package for Tailwind classes */
-@source "../../../../packages/ui/dist";
+/* Scan @ccatto/* packages for Tailwind classes (installed from npm) */
+@source "../../../../node_modules/@ccatto/ui/dist";
+@source "../../../../node_modules/@ccatto/auth-ui/dist";
 
 @custom-variant dark (&:is(.dark *));
 
