@@ -19,13 +19,41 @@ const FooterCatto = dynamicImport(
 // Force dynamic rendering for pages that use session context
 export const dynamic = 'force-dynamic';
 
-// Generate metadata with translations
+// Base URL drives canonical/OG/Twitter absolute URLs. Reads NEXT_PUBLIC_BASE_URL
+// so forks don't hardcode a domain (set it per environment in .env).
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+
+// Generate metadata with translations. Provides a full SEO baseline (canonical,
+// hreflang alternates, OpenGraph, Twitter) for every fork.
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('metadata');
+  const title = t('title');
+  const description = t('description');
+
   return {
-    title: t('title'),
-    description: t('description'),
-    // TODO: Add your canonical URL and alternate languages
+    metadataBase: new URL(BASE_URL),
+    title,
+    description,
+    alternates: {
+      canonical: '/',
+      // Mirror the locales in i18n.ts; extend if you add more languages.
+      languages: { en: '/en', es: '/es' },
+    },
+    openGraph: {
+      title,
+      description,
+      url: BASE_URL,
+      siteName: title,
+      type: 'website',
+      // TODO: add a social share image at public/og-image.png (1200x630) and set:
+      // images: [{ url: '/og-image.png', width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      // TODO: images: ['/og-image.png'] once the asset exists.
+    },
   };
 }
 
